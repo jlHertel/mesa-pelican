@@ -1,9 +1,6 @@
 Title: Introduction
 slug: intro
 
-
-#Introduction
-
 The Mesa project began as an open-source implementation of the[OpenGL](https://www.opengl.org/) specification -
 a system for rendering interactive 3D graphics.
 

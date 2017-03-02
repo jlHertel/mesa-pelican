@@ -114,10 +114,6 @@ NISARG_SIDEBAR = [
       ('DRI website', 'https://dri.freedesktop.org/'),
       ('FreeDesktop.org', 'https://www.freedesktop.org/'),
       ('Developer Blogs', 'https://planet.freedesktop.org/')
-    ]),
-
-    ('Hosted By', [
-      ('freedesktop.org', 'https://freedesktop.org/')
     ])
 ]
 
