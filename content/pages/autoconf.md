@@ -1,15 +1,14 @@
 Title: Compilation and Installation using Autoconf
 slug: autoconf
 
-1. [Basic Usage](#basic)
-2. [Driver Options](#driver)
-    * [Xlib Driver Options](#xlib)
-    * [DRI Driver Options](#dri)
-    * [OSMesa Driver Options](#osmesa)
+1. [Basic Usage][1]
+2. [Driver Options][2]
+    * [Xlib Driver Options][3]
+    * [DRI Driver Options][4]
+    * [OSMesa Driver Options][5]
 
 
-##<a name="basic"></a>1. Basic Usage
-
+## <a name="basic"></a>1. Basic Usage
 
 The autoconf generated configure script can be used to guess your
 platform and change various options for building Mesa. To use the
@@ -17,7 +16,6 @@ configure script, type:
 
     :::bash
     ./configure
-
 
 To see a short description of all the options, type ```./configure
 --help```. If you are using a development snapshot and the configure
@@ -28,16 +26,12 @@ will run ```configure``` with these options after it is
 generated. Once you have run ```configure``` and set the options
 to your preference, type:
 
-
     :::bash
     make
-
 
 This will produce libGL.so and/or several other libraries depending on the
 options you have chosen. Later, if you want to rebuild for a different
 configuration run ```make realclean``` before rebuilding.
-
-
 
 Some of the generic autoconf options are used with Mesa:
 
@@ -95,7 +89,6 @@ PKG_CONFIG_PATH
     package metadata in ```/usr/X11R6``` before the standard
     directories.
 
-
 There are also a few general options for altering the Mesa build:
 
 --enable-debug
@@ -119,13 +112,13 @@ There are also a few general options for altering the Mesa build:
 
     Note that these can vary from distribution to distribution. For more
     information check with the 
-    [autoconf manual](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Specifying-Target-Triplets.html).
+    [autoconf manual][6].
     Note that you will need to correctly set ```PKG_CONFIG_PATH``` as well.
 
     In some cases a single compiler is capable of handling both architectures
     (multilib) in that case one would need to set the ```CC,CXX``` variables
     appending the correct machine options. Seek your compiler documentation for
-    further information - [gcc machine dependent options](https://gcc.gnu.org/onlinedocs/gcc/Submodel-Options.html)
+    further information - [gcc machine dependent options][7]
 
     In addition to specifying correct ```PKG_CONFIG_PATH``` for the target 
     architecture, the following should be sufficient to configure multilib Mesa
@@ -133,9 +126,7 @@ There are also a few general options for altering the Mesa build:
     ```./configure CC="gcc -m32" CXX="g++ -m32" --build=x86_64-pc-linux-gnu --host=i686-pc-linux-gnu ...```
 
 
-
-##<a name="driver"></a>2. GL Driver Options
-
+## <a name="driver"></a>2. GL Driver Options
 
 There are several different driver modes that Mesa can use. These are
 described in more detail in the <a href="install.html">basic
@@ -143,11 +134,13 @@ installation instructions</a>. The Mesa driver is controlled through the
 configure options ```--enable-glx``` and ```--enable-osmesa```
 
 
-###<a name="xlib"></a>Xlib
+### <a name="xlib"></a>Xlib
+
 It uses Xlib as a software renderer to do all rendering. It corresponds
 to the option ```--enable-glx=xlib``` or ```--enable-glx=gallium-xlib```.
 
-###<a name="dri"></a>DRI
+
+### <a name="dri"></a>DRI
 
 This mode uses the DRI hardware drivers for
 accelerated OpenGL rendering. To enable use ```--enable-glx=dri
@@ -189,7 +182,7 @@ accelerated OpenGL rendering. To enable use ```--enable-glx=dri
     and ```/usr/local/lib```, respectively.
 
 
-###<a name="osmesa"></a>OSMesa
+### <a name="osmesa"></a>OSMesa
 
 No libGL is built in this
 mode. Instead, the driver code is built into the Off-Screen Mesa
@@ -206,7 +199,15 @@ page for more details.  It corresponds to the option
     will create the libOSMesa16 library with a 16-bit color channel.
 
 
-##<a name="library"></a>3. Library Options
+## <a name="library"></a>3. Library Options
 
 The configure script provides more fine grained control over the libraries
 that will be built.
+
+[1]: #basic
+[2]: #driver
+[3]: #xlib
+[4]: #dri
+[5]: #osmesa
+[6]: https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Specifying-Target-Triplets.html
+[7]: https://gcc.gnu.org/onlinedocs/gcc/Submodel-Options.html

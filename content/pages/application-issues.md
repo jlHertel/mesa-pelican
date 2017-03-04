@@ -3,7 +3,7 @@ slug: application-issues
 
 This page documents known issues with some OpenGL applications.
 
-##Topogun
+## Topogun
 
 [Topogun][1] for Linux (version 2, at least)
 creates a GLX visual without requesting a depth buffer.
@@ -16,7 +16,7 @@ Using the [driconf][2] tool,
 set the "Create all visuals with a depth buffer" option before running Topogun.
 Then, all GLX visuals will be created with a depth buffer.
 
-##Old OpenGL games
+## Old OpenGL games
 
 Some old OpenGL games (approx. ten years or older) may crash during
 start-up because of an extension string buffer-overflow problem.
