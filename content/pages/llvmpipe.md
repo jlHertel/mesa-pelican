@@ -38,8 +38,8 @@ environment variable to the directory you installed it to.
     LLVM will be statically linked, so when building on MSVC it needs to be
 built with a matching CRT as Mesa, and you'll need to pass
 ```-DLLVM_USE_CRT_xxx=yyy``` as described below.
-
-    <table border="1">
+    <div class="table-responsive">
+    <table class="table table-bordered">
      <tr>
        <th rowspan="2">LLVM build-type</th>
        <th colspan="2" style="text-align: center">Mesa build-type</th>
@@ -59,6 +59,7 @@ built with a matching CRT as Mesa, and you'll need to pass
        <td>```-DLLVM_USE_CRT_RELEASE=MT```</td>
      </tr>
    </table>
+   </div>
 
     You can build only the x86 target by passing -DLLVM_TARGETS_TO_BUILD=X86 to cmake.
 

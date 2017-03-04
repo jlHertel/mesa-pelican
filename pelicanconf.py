@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Mesa Release Manager'
 SITENAME = 'Mesa 3D'
 SITESUBTITLE = u'A open source implementation of the openGL spec'
-SITEURL = 'http://localhost/mesa-pelican/output'
+SITEURL = ''
 
 # Default path to read content from. If you don't specify a path after calling the pelican command, this path will be used
 PATH = 'content'
