@@ -36,9 +36,9 @@ PAGE_SAVE_AS = '{slug}.html'
 ARTICLE_SAVE_AS = '{slug}.html'
 
 # Disable Categories, tags and Authors generation
-CATEGORY_SAVE_AS = None
-TAG_SAVE_AS = None
-AUTHOR_SAVE_AS = None
+CATEGORY_SAVE_AS = ''
+TAG_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
 
 # Configure how many itens to show per page
 DEFAULT_PAGINATION = 10
@@ -49,7 +49,7 @@ THEME = 'nisarg-theme'
 NISARG_SHOW_SIDEBAR = 1
 NISARG_PAGINATION_NEXT = u'Next'
 NISARG_PAGINATION_PREVIOUS = u'Previous'
-NISARG_HEADER = 'images/theme.jpg'
+NISARG_HEADER = 'images/header.jpg'
 NISARG_MINIFY_CSS = 1
 
 NISARG_SIDEBAR = [
@@ -60,7 +60,6 @@ NISARG_SIDEBAR = [
       ('Platforms and Drivers',   'systems.html'),
       ('License &amp; Copyright', 'license.html'),
       ('FAQ',                     'faq.html'),
-      ('Release Notes',           'relnotes.html'),
       ('Acknowledgements',        'thanks.html'),
       ('Conformance Testing',     'conform.html')
     ]),
