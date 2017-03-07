@@ -14,10 +14,13 @@ PATH = 'content'
 TIMEZONE = 'America/Los_Angeles'
 
 # Configure how to display the dates
-DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+DEFAULT_DATE_FORMAT = '%B %d,%Y'
 
 # Set the default language of the generated files
 DEFAULT_LANG = 'en'
+
+# Set the default locale to ignore users C Locale
+LOCALE = ('usa', 'en_US')
 
 # Disable Feed generation
 CATEGORY_FEED_ATOM = None
